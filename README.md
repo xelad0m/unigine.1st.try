@@ -14,7 +14,7 @@
 Установка / запуск:
 ```
 mkdir test && cd test
-wget https://github.com/xelad0m/unigine.1st.try.git/releases/download/v0.0.1/bundle.tar
+wget https://github.com/xelad0m/unigine.1st.try/releases/download/v0.0.1/bundle.tar
 tar -xvf bundle.tar .
 ./launch_release.sh
 ```
