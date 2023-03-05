@@ -14,7 +14,7 @@
 ```
 mkdir test && cd test
 wget https://github.com/xelad0m/unigine.1st.try/releases/download/v0.0.2/bundle2.tar
-tar -xvf bundle.tar .
+tar -xvf bundle2.tar .
 ./launch_release.sh
 ```
 
