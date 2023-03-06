@@ -121,11 +121,13 @@ def report(conn):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Telemetry server. If DB file not found it will be created with test user "user:password"')
-    parser.add_argument('-p', '--port', type=int, default=PORT, help=f"Server port on localhost (dafault {PORT})")
+    parser.add_argument('-a', '--addr', type=str, default=HOST, help=f"Server host (dafault {HOST})")
+    parser.add_argument('-p', '--port', type=int, default=PORT, help=f"Server port (dafault {PORT})")
     parser.add_argument('-d', '--db', type=str, help=f'Path to sqlite3 database (default: ./database/telemetry.db)')
     parser.add_argument('-r', '--report', action='store_true', help=f"Print number of sessions by users in DB")
     args = parser.parse_args()
     
+    HOST = args.addr
     PORT = args.port
     DB_PATH = DB_PATH if args.db is None else args.db
 
