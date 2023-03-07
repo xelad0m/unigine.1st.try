@@ -25,7 +25,7 @@ def datastream(num):
 
 
 class Client:
-    """Класс представляющий клиента:
+    """Класс, представляющий клиента:
     user, password, ip, port    - понятно
     datastream - поток событий, который генерирует клиент
     timeout, missed - таймаут и количество пропущенных KEEP_ALIVE пакетов для закрытия соединения
@@ -45,7 +45,7 @@ class Client:
         self.finished = False
 
     def recv_keep_alive(self):
-        """Поток, обрабатывающих прием KEEP_ALIVE пакетов"""
+        """Поток, обрабатывающий прием KEEP_ALIVE пакетов"""
         while not self.finished or self.missed < 0:
 
             try:
@@ -60,7 +60,7 @@ class Client:
         self.sock.close()
     
     def send_keep_alive(self):
-        """Поток, обрабатывающих отправку KEEP_ALIVE пакетов"""
+        """Поток, обрабатывающий отправку KEEP_ALIVE пакетов"""
         while not self.finished or self.missed < 0:
             if time.time() - self.timestamp > self.timeout:
                 self.missed += 1
