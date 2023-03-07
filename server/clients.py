@@ -9,7 +9,7 @@ from db import Database
 
 HOST, PORT = "localhost", 10227
 
-DB_PATH = "./telemetryQ.db"
+DB_PATH = "./telemetry.db"
 
 ACCEPTED    = 200
 KEEP_ALIVE  = 100
